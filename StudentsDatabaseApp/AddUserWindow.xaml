@@ -21,7 +21,6 @@
         <TextBox x:Name="SecNameInput" HorizontalAlignment="Left" Margin="169,107,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
 
         <Label Content="Data urodzenia*" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
-        <TextBox x:Name="BirthdayInput" HorizontalAlignment="Left" Margin="169,177,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
 
         <Label Content="Nr telefonu" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
         <TextBox x:Name="PhoneNumberInput" HorizontalAlignment="Left" Margin="169,212,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
@@ -36,7 +35,8 @@
         <TextBox x:Name="PosCodeInput" HorizontalAlignment="Left" Margin="169,317,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
 
         <Button x:Name="AddButton" Content="Dodaj" Margin="634,368,10,15" Click="AddButton_Click"/>
-        <Button x:Name="CancelButton" Content="Anuluj" Margin="14,378,640,15" RenderTransformOrigin="1.06,-0.098" Height="47"/>
+        <Button x:Name="CancelButton" Content="Anuluj" Margin="10,368,644,15" RenderTransformOrigin="1.06,-0.098" Click="CancelButton_Click"/>
+        <DatePicker x:Name="BirthdayInput" HorizontalAlignment="Left" Margin="169,176,0,0" VerticalAlignment="Top" Height="30" Width="610"/>
 
 
     </Grid>

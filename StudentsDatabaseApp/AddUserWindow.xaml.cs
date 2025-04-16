@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,11 +25,31 @@ namespace StudentsDatabaseApp
         private List<TextBox> requiredInputs;
         private MainWindow parent;
 
+        public Brush INCORRECT_COLOR = Brushes.Red;
+        public Brush CORRECT_COLOR = Brushes.Transparent;
+
+
         public AddUserWindow(MainWindow parent)
         {
             InitializeComponent();
             this.parent = parent;
-            this.requiredInputs = new List<TextBox> { PeselInput, NameInput, SurnameInput, BirthdayInput, HomeAdressInput, CityInput, PosCodeInput };
+            this.requiredInputs = new List<TextBox> { PeselInput, NameInput, SurnameInput, HomeAdressInput, CityInput, PosCodeInput };
+        }
+
+        private bool allFieldsEmpty()
+        {
+            foreach (TextBox input in this.requiredInputs)
+            {
+                if (!Utils.strEmpty(input.Text))
+                { 
+                    return false;
+                }
+            }
+            if (!Utils.strEmpty(BirthdayInput.Text) || !Utils.strEmpty(SecNameInput.Text) || !Utils.strEmpty(PhoneNumberInput.Text))
+                return false;
+
+            return true;
+
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -38,12 +59,23 @@ namespace StudentsDatabaseApp
             {
                 if (Utils.strEmpty(input.Text))
                 {
-                    incorrectStyle(input);
+                    input.Background = INCORRECT_COLOR;
+                    correct = false;
                 }
                 else
                 {
-                    correctStyle(input);
+                    input.Background = CORRECT_COLOR;
                 }
+            }
+            //DRY :D
+            if (Utils.strEmpty(BirthdayInput.Text))
+            {
+                BirthdayInput.Background = INCORRECT_COLOR; ;
+                correct = false;
+            }
+            else
+            {
+                BirthdayInput.Background = CORRECT_COLOR;
             }
 
             if (!correct) return;
@@ -58,9 +90,17 @@ namespace StudentsDatabaseApp
             string city = CityInput.Text;
             string posCode = PosCodeInput.Text;
 
-            if (!Utils.IsValidPESEL(pesel))
+            DateOnly? birthdayDate = Utils.getDateFromString(birthday, '.');
+
+            if(birthdayDate == null)
             {
-                incorrectStyle(PeselInput);
+                BirthdayInput.Background = INCORRECT_COLOR;
+                return;
+            }
+
+            if (!Utils.IsValidPESEL(pesel) || !Utils.checkDatePESEL((DateOnly) birthdayDate, pesel)) 
+            {
+                PeselInput.Background = INCORRECT_COLOR;
                 return;
             }
 
@@ -74,12 +114,14 @@ namespace StudentsDatabaseApp
                 phoneNumber = Regex.Replace(phoneNumber, "[^0-9]", "");
                 Console.WriteLine(phoneNumber);
 
-                if (!phoneNumber.StartsWith("+")) ;
+                if (!phoneNumber.StartsWith("+"))
+                {
+                    phoneNumber = "+48" + phoneNumber;
+                }
             }
 
-
-
-
+            parent.mainList.Items.Add(new Student(pesel, name, secName, surname, birthday, phoneNumber, homeAdress, city, posCode));
+            //this.Close();
         }
 
         private String formatName(String text)
@@ -113,14 +155,21 @@ namespace StudentsDatabaseApp
             return text[0].ToString().ToUpper() + text.Substring(1);
         }
 
-        private void incorrectStyle(TextBox textBox)
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
-            textBox.Background = Brushes.Red;
-        }
+            if (!allFieldsEmpty())
+            {
+                MessageBoxResult result = MessageBox.Show("Jesteś pewny by wyjść?", "Are you sure", MessageBoxButton.YesNo, MessageBoxImage.Error);
+                if(result == MessageBoxResult.Yes)
+                {
+                    Close();
+                }
 
-        private void correctStyle(TextBox textBox)
-        {
-            textBox.Background = Brushes.Transparent;
+            }
+            else
+            {
+                Close();
+            }
         }
     }
 }

@@ -8,9 +8,23 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
-        <ListView x:Name="mainList" Margin="10,0,10,50">
+        <Menu x:Name="menu" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="New" IsEnabled="False"/>
+                <MenuItem Header="Open" />
+                <MenuItem Header="Save"/>
+                <Separator/>
+                <MenuItem Header="Exit"/>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="New" Click="Add_User_Click"/>
+                <MenuItem Header="Remove Selected" Click="RemoveSelected_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <ListView x:Name="mainList" Margin="10,36,10,14">
             <ListView.View>
-                <GridView>
+                <GridView AllowsColumnReorder="False">
                     <GridViewColumn Header="PESEL" Width="100" DisplayMemberBinding="{Binding PESEL}"/>
                     <GridViewColumn Header="Imię" Width="80" DisplayMemberBinding="{Binding Name}"/>
                     <GridViewColumn Header="Drugie imię" Width="100" DisplayMemberBinding="{Binding SecName}"/>
@@ -24,8 +38,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button Content="Dodaj użytkownika" Height="28" Width="129" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,32,10" Click="Button_Click"/>
-        <Button Content="Usuń zaznaczonych" Height="28" Width="129" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,204,10"/>
 
     </Grid>
 </Window>

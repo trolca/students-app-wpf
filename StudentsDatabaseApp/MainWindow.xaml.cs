@@ -46,7 +46,16 @@ namespace StudentsDatabaseApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void RemoveSelected_Click(object sender, RoutedEventArgs e)
+        {
+           while(mainList.SelectedItems.Count > 0)
+            {
+                mainList.Items.Remove(mainList.SelectedItems[0]);
+            }
+        }
+
+        private void Add_User_Click(object sender, RoutedEventArgs e)
         {
             new AddUserWindow(this).ShowDialog();
         }
