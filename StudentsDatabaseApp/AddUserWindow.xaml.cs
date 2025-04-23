@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,8 +50,9 @@ namespace StudentsDatabaseApp
                 return false;
 
             return true;
-
         }
+
+        
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
@@ -121,7 +123,7 @@ namespace StudentsDatabaseApp
             }
 
             parent.mainList.Items.Add(new Student(pesel, name, secName, surname, birthday, phoneNumber, homeAdress, city, posCode));
-            //this.Close();
+            this.Close();
         }
 
         private String formatName(String text)

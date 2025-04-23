@@ -81,6 +81,11 @@ namespace StudentsDatabaseApp
             return new DateOnly(year, month, day);
         }
 
+        public static string strConv(string? str)
+        {
+            return str == null ? "" : (string) str; 
+        }
+
         public static bool checkDatePESEL(DateOnly birthDate, string pesel)
         {
             string yearPslStr = pesel.Substring(0, 2);
