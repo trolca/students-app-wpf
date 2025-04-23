@@ -1,0 +1,43 @@
+﻿<Window x:Class="StudentsDatabaseApp.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsDatabaseApp"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-6">
+
+        <Label Content="Imie*" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" FontSize="20" Height="36" Width="146"/>
+        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Margin="169,71,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Nazwisko*" HorizontalAlignment="Left" Margin="10,141,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
+        <TextBox x:Name="SurnameInput" HorizontalAlignment="Left" Margin="169,142,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="PESEL*" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" FontSize="20" Height="38" Width="154"/>
+        <TextBox x:Name="PeselInput" HorizontalAlignment="Left" Margin="169,32,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Drugie imie" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" FontSize="17" Height="34" Width="154"/>
+        <TextBox x:Name="SecNameInput" HorizontalAlignment="Left" Margin="169,107,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Data urodzenia*" HorizontalAlignment="Left" Margin="10,176,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
+
+        <Label Content="Nr telefonu" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
+        <TextBox x:Name="PhoneNumberInput" HorizontalAlignment="Left" Margin="169,212,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Adres zamieszkania*" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" FontSize="16" Height="30" Width="154"/>
+        <TextBox x:Name="HomeAdressInput" HorizontalAlignment="Left" Margin="169,247,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Miejscowość*" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
+        <TextBox x:Name="CityInput" HorizontalAlignment="Left" Margin="169,282,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Label Content="Kod pocztowy*" HorizontalAlignment="Left" Margin="10,316,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="154"/>
+        <TextBox x:Name="PosCodeInput" HorizontalAlignment="Left" Margin="169,317,0,0" TextWrapping="Wrap" FontSize="15" VerticalAlignment="Top" Width="621" Height="30"/>
+
+        <Button x:Name="AddButton" Content="Dodaj" Margin="634,368,10,15" Click="AddButton_Click"/>
+        <Button x:Name="CancelButton" Content="Anuluj" Margin="10,368,644,15" RenderTransformOrigin="1.06,-0.098" Click="CancelButton_Click"/>
+        <DatePicker x:Name="BirthdayInput" HorizontalAlignment="Left" Margin="169,176,0,0" VerticalAlignment="Top" Height="30" Width="610"/>
+
+
+    </Grid>
+</Window>

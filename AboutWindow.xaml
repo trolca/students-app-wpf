@@ -1,0 +1,13 @@
+﻿<Window x:Class="StudentsDatabaseApp.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StudentsDatabaseApp"
+        mc:Ignorable="d"
+        Title="AboutWindow" Height="200" Width="800">
+    <Grid>
+        <Label Content="Świetny program do zapisywania uczniów. Stworzony przez Szymona Giemze z 3TP. Używać na własną odpowiedzialność." HorizontalAlignment="Left" Height="48" Margin="64,70,0,0" VerticalAlignment="Top" Width="657"/>
+
+    </Grid>
+</Window>
