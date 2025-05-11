@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Student\source\repos\StudentsDatabaseApp\StudentsDatabaseApp\obj\Debug\net8.0-windows\
+C:\Users\szgie\Source\Repos\trolca\students-app-wpf\StudentsDatabaseApp\obj\Debug\net8.0-windows\
 StudentsDatabaseApp
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Student\source\repos\StudentsDatabaseApp\StudentsDatabaseApp\App.xaml
-2-1566384222
+C:\Users\szgie\Source\Repos\trolca\students-app-wpf\StudentsDatabaseApp\App.xaml
+3-349863091
 
-8-514013505
-198-556154604
-AddUserWindow.xaml;MainWindow.xaml;
+9-1895599322
+198155382431
+AboutWindow.xaml;AddUserWindow.xaml;MainWindow.xaml;
 
-True
+False
 

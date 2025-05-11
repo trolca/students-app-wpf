@@ -96,7 +96,7 @@ namespace StudentsDatabaseApp
 
         private void AboutProgram_Click(object sender, RoutedEventArgs e)
         {
-
+            new AboutWindow().ShowDialog();
         }
 
         private void LoadFile_CLick(object sender, RoutedEventArgs e)

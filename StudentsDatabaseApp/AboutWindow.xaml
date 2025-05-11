@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="AboutWindow" Height="200" Width="800">
     <Grid>
-        <Label Content="Świetny program do zapisywania uczniów. Stworzony przez Szymona Giemze z 3TP. Używać na własną odpowiedzialność." HorizontalAlignment="Left" Height="48" Margin="64,70,0,0" VerticalAlignment="Top" Width="657"/>
+        <Label HorizontalAlignment="Left" Height="68" Margin="64,70,0,0" VerticalAlignment="Top" Width="699" >
+            <TextBlock TextWrapping="WrapWithOverflow"> Ta aplikacja usprawnia zarządzanie danymi uczniów, oferując funkcje dodawania, modyfikacji i usuwania informacji osobowych (m.in. PESEL, imię, nazwisko, data urodzenia). Wbudowany system walidacji dba o poprawność wprowadzanych danych, w tym weryfikuje numer PESEL i jego spójność z datą urodzenia.</TextBlock>
+        </Label>
 
     </Grid>
 </Window>

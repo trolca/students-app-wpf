@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StudentsDatabaseApp
-build_property.ProjectDir = C:\Users\Student\source\repos\StudentsDatabaseApp\StudentsDatabaseApp\
+build_property.ProjectDir = C:\Users\szgie\Source\Repos\trolca\students-app-wpf\StudentsDatabaseApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
