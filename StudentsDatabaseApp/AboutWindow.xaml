@@ -8,7 +8,7 @@
         Title="AboutWindow" Height="200" Width="800">
     <Grid>
         <Label HorizontalAlignment="Left" Height="68" Margin="64,70,0,0" VerticalAlignment="Top" Width="699" >
-            <TextBlock TextWrapping="WrapWithOverflow"> Ta aplikacja usprawnia zarządzanie danymi uczniów, oferując funkcje dodawania, modyfikacji i usuwania informacji osobowych (m.in. PESEL, imię, nazwisko, data urodzenia). Wbudowany system walidacji dba o poprawność wprowadzanych danych, w tym weryfikuje numer PESEL i jego spójność z datą urodzenia.</TextBlock>
+            <TextBlock TextWrapping="WrapWithOverflow"> Ta aplikacja usprawnia zarządzanie danymi uczniów, oferując funkcje dodawania, modyfikacji i usuwania informacji osobowych (m.in. PESEL, imię, nazwisko, data urodzenia). Wbudowany system walidacji dba o poprawność wprowadzanych danych, w tym weryfikuje numer PESEL i jego spójność z datą urodzenia. Autor: Szymon Giemza</TextBlock>
         </Label>
 
     </Grid>
