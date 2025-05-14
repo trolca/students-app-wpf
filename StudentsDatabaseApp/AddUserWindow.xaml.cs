@@ -128,6 +128,7 @@ namespace StudentsDatabaseApp
 
         private String formatName(String text)
         {
+            if (text.Length <= 0) return text;
             text = text.ToLower();
             text = setLetterUp(text);
             string[] partsName = text.Split("-");
